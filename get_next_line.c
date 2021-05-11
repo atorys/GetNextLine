@@ -65,7 +65,7 @@ int	get_next_line(int fd, char **line)
 	if (!fd || BUFFER_SIZE <= 0 || read(fd, buffer, 0) == -1) // check line == NULL /*todo: !fd < 0*/
 		return (-1);
 	status = 0;
-	while (!tail || (!ft_strchr(tail, '\n')  && !status))
+	while (!tail || (!ft_strchr(tail, '\n')  && !status)) ///comment for check
 	{
 		bytes = read(fd, buffer, BUFFER_SIZE);
 		if (bytes < 0)
